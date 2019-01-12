@@ -3,9 +3,9 @@
 
 # 注意事項
 - 本資料は、US-CERTのAlert（AA18-284A）"[Publicly Available Tools Seen in Cyber Incidents Worldwide](https://www.us-cert.gov/ncas/alerts/AA18-284A)"を翻訳した資料です。
+- 内容については、最大限の努力を持って正確に期していますが、本書の内容に基づく運用結果については責任を負いかねますので、ご了承ください。
 - 他の翻訳は、『[Scientia Securtity on GitHub](https://scientia-security.github.io/)』を参照してください。
 - ブログは『[セキュリティコンサルタントの日誌から](https://www.scientia-security.org/)』を参照してください。
-
 
 # サマリ
 本レポートは、オーストラリア、カナダ、ニュージーランド、イギリス、アメリカのサイバーセキュリティ専門機関の共同研究成果です。[^1][^2][^3][^4][^5]
