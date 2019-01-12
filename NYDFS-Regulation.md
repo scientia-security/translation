@@ -1,6 +1,12 @@
 ニューヨーク州 金融サービス局
 ===
 
+# 注意事項
+- 本資料は、NYDFS(New York State Department of Financial Services)が公表した"[NYDFS Cybersecurity Requirements for Financial Services Companies](https://www.dfs.ny.gov/legal/regulations/adoptions/dfsrf500txt.pdf)"を翻訳した資料です。
+- 内容については、最大限の努力を持って正確に期していますが、本書の内容に基づく運用結果については責任を負いかねますので、ご了承ください。
+- 他の翻訳は、『[Scientia Securtity on GitHub](https://scientia-security.github.io/)』を参照してください。
+- ブログは『[セキュリティコンサルタントの日誌から](https://www.scientia-security.org/)』を参照してください。
+
 **行政規則集第23巻500編**
 
 # 金融サービス企業に対するサイバーセキュリティ要件
