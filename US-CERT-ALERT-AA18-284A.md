@@ -2,8 +2,9 @@
 ==
 
 # 注意事項
-本資料は、US-CERTのAlert（AA18-284A）"[Publicly Available Tools Seen in Cyber Incidents Worldwide](https://www.us-cert.gov/ncas/alerts/AA18-284A)"を翻訳した資料です。
-他の翻訳は、『[セキュリティコンサルタントの日誌から](https://www.scientia-security.org/translation)』を参照してください。
+- 本資料は、US-CERTのAlert（AA18-284A）"[Publicly Available Tools Seen in Cyber Incidents Worldwide](https://www.us-cert.gov/ncas/alerts/AA18-284A)"を翻訳した資料です。
+- 他の翻訳は、『[Scientia Securtity on GitHub](https://scientia-security.github.io/)』を参照してください。
+- ブログは『[セキュリティコンサルタントの日誌から](https://www.scientia-security.org/)』を参照してください。
 
 
 # サマリ
