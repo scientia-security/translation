@@ -2,8 +2,9 @@
 ==
 
 # 注意事項
-本資料は、FBIのドキュメント"[Elicitation Techniques](https://www.fbi.gov/file-repository/elicitation-brochure.pdf/view)"を翻訳した資料です。
-他の翻訳は、『[セキュリティコンサルタントの日誌から](https://www.scientia-security.org/translation)』を参照してください。
+- 本資料は、FBIのドキュメント"[Elicitation Techniques](https://www.fbi.gov/file-repository/elicitation-brochure.pdf/view)"を翻訳した資料です。
+- 他の翻訳は、『[Scientia Securtity on GitHub](https://scientia-security.github.io/)』を参照してください。
+- ブログは『[セキュリティコンサルタントの日誌から](https://www.scientia-security.org/)』を参照してください。
 
 # はじめに
 この記事では、誘導質問(Elicitation)の基礎と技術を紹介します。技術と脅威を知ることで、誘導質問に気付き、回避することができます。
