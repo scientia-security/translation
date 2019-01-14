@@ -1,6 +1,12 @@
 アドバイザリ：O365への侵入増加と防御方法について
 ====
 
+# 注意事項
+- 本資料は、英国サイバーセキュリティセンター(UK National Cyber Security Centre)の資料"[Advisory: The rise of Microsoft Office 365 compromise](https://www.ncsc.gov.uk/alerts/rise-microsoft-office-365-compromise)"を翻訳した資料です。
+- 内容については、最大限の努力を持って正確に期していますが、本書の内容に基づく運用結果については責任を負いかねますので、ご了承ください。
+- 他の翻訳は、『[Scientia Securtity on GitHub](https://scientia-security.github.io/)』を参照してください。
+- ブログは『[セキュリティコンサルタントの日誌から](https://www.scientia-security.org/)』を参照してください。
+
 # 本ドキュメントについて
 NCSCアドバイザリは、Microsoft Office 365の侵入と、あらゆる規模の組織が考慮すべき防御方法の詳細を提供します。このアドバイザリで紹介された防御方法を取る際には、リスクベースアプローチに基づき実行する必要があります。
 
@@ -93,7 +99,8 @@ Office 365に対する多くの緩和策はサービス自体に適用される�
 * [End user Devices Security Guidance](https://www.ncsc.gov.uk/guidance/end-user-device-security)
 * [Macro Security for Microsoft Office](https://www.ncsc.gov.uk/guidance/macro-security-microsoft-office)
 * [Preventing Lateral Movement](https://www.ncsc.gov.uk/guidance/preventing-lateral-movement)
-* [Introduction to logging for security purposes](https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes)* [Phishing attacks: defending your organisation](https://www.ncsc.gov.uk/phishing)
+* [Introduction to logging for security purposes](https://www.ncsc.gov.uk/guidance/introduction-logging-security-purposes)
+* [Phishing attacks: defending your organisation](https://www.ncsc.gov.uk/phishing)
 
 [^1]: https://www.itproportal.com/features/office-365-and-linkedin-integration-a-goldmine-for-fraudsters/
 [^2]: https://www.tripwire.com/state-of-security/featured/new-type-brute-force-attack-office-365-accounts/
