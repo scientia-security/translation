@@ -103,5 +103,8 @@ OSINT用のツールはほかにも多数ありますが、全ての調査で有
 技術的インフラストラクチャの分析は、脅威インテリジェンスとオープンソースインテリジェンスが交差する点です。しかし、いくつかの点で調査の重要なパートになり得ます。
 さて、読者が探すべきは以下の通りです。
 
-* **IPとドメイン**: この目的のツールは多く存在しますが、[Passive Total](https://community.riskiq.com/)（現在は、RiskIQ）が最も良い情報源になると思います。Webインターフェイスから1日１５クエリまで、API経由でも１５クエリまで無料で使えます。ほとんどこのツールを使っていますが、[Robtex](https://www.robtex.com/)、[HackerTargetand](https://hackertarget.com/reverse-dns-lookup/)、[Security Trails](https://securitytrails.com/)も他の良い代替ツールになります。
+* **IPとドメイン**：この目的のツールは多く存在しますが、[Passive Total](https://community.riskiq.com/)（現在は、RiskIQ）が最も良い情報源になると思います。Webインターフェイスから1日１５クエリまで、API経由でも１５クエリまで無料で使えます。ほとんどこのツールを使っていますが、[Robtex](https://www.robtex.com/)、[HackerTargetand](https://hackertarget.com/reverse-dns-lookup/)、[Security Trails](https://securitytrails.com/)も他の良い代替ツールになります。
 * **証明書**: [Censys](https://censys.io/)は素晴らしいツールです。しかし、より知られておらず少し劣りますが[crt.sh](https://crt.sh/)も非常によい証明書の透明性データベースです。
+* **スキャン**：IPアドレス上でどのようなサービスが動いているか確認することは有益です。[Nmap](https://nmap.org/)を使って自分でスキャンすることもできますが、全てのIPv4アドレスに定期的にスキャンしてくれるプラットフォームを活用することもできます。その二つのプラットフォームこそ、[Censys](https://nmap.org/)と[Shodan](https://www.shodan.io/)です。この二つは異なる側面に焦点を当てており、それぞれの特徴を知り、両方を使いこなす必要があります（ShodanはIoTに焦点を置いており、CensysはTLSに焦点を置いています）。[BinaryEdge](https://www.shodan.io/)は最近登場し急速に発展している代替とプラットフォームです。より最近では、[Fofa](https://fofa.so/)と呼ばれる中国プラットフォームが登場しました。別の情報源として、[Rapid7 Open Data](https://opendata.rapid7.com/)が挙げられますが、スキャンファイルをダウンロードする必要があり、自分で分析を行う必要があります。最後にIPアドレスに関する時系列データはプラットフォームの変遷を理解する上で金脈となることを指摘したいと思います。Censysはこうしたデータを有償プランでしか提供してくれません（アカデミックの研究者は無料で利用することができます）が、ShodanはIPごとにこうしたデータを提供してくれ、非常に素晴らしいです。 harpoon shodan ip -H IPがコマンドがもたらす内容はぜひ確認してください（Shodanのライフアカウントを支払う必要があります）
+•	脅威情報: OSINTではあまり重要ではありませんが、ドメイン、IP、URLに対する悪性のアクティビティを確認することは常に興味深いことを教えてくれます。これを行うために、私はPassive Totalと AlienVault OTXに依存しています。
+<span style="color: green"> Some green text </span>
