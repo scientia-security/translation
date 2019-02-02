@@ -140,3 +140,25 @@ OSINT用のツールはほかにも多数ありますが、全ての調査で有
 * Bellingcatによる[Metadata: MetaUseful & MetaCreepy](https://www.bellingcat.com/resources/how-tos/2015/04/24/metadata-metauseful-metacreepy/)
 * First Draft newsによる[The Visual Verification Guide](https://firstdraftnews.org/wp-content/uploads/2017/03/FDN_verificationguide_photos.pdf?x40896)
 
+# ソーシャルネットワーク
+ソーシャルネットワークの分野では、多くのツールが存在します。しかし、プラットフォームに多く依存します。以下に有益なツールとテクニックを抜粋します。
+* **Twitter**：APIは、ツイートが公開された時間とツールを教えてくれます。x0rzが開発した[tweets_analyzer](https://github.com/x0rz/tweets_analyzer)は、アカウントのアクティビティの概要をまとめてくれるツールです。メールアドレスからTwitter IDを探してくる方法も複数存在しますが、[少し特殊な方法](https://booleanstrings.com/2018/05/02/how-to-find-the-twitter-id-from-an-email-address/)を使います。
+* **Facebook**：Facebookの調査で最も良いリソースは、[Michael BazzellのWebサイト](https://inteltechniques.com/)でしょう。特に彼の[独自ツール](https://inteltechniques.com/osint/facebook.html)のページは秀逸です。
+* **LinkedIn**：LinkedIn上で私が見つけた最も有益なテクニックの一つは、[メールアドレスからLinkedInプロファイルを見つける方法](https://inteltechniques.com/blog/2018/04/25/linkedin-profiles-by-email/)です。
+
+# キャッシュプラットフォーム
+調査時において、素晴らしい情報源になるものの一つに、Webサイトのキャッシュを作成するプラットフォーム群が挙げられます。なぜなら、Webサイトは押したり、Webサイトの時系列的な変遷を分析できるためです。こうしたプラットフォームは、自動的にWebサイトをキャッシュするものもあれば、リクエストに応じてキャッシュするものもあります。
+* **検索エンジン**：多くの検索エンジンは、クローリングしたときのWebサイトのコンテンツをキャッシュとして保存します。これは非常に有益であり、多くのサイトのキャッシュを見ることができます。但し、最後にキャッシュされるタイミング（多くの場合１週間以内だと思います）を管理できないこと、すぐに削除されてしまう事実も抑えておく必要があります。そのため、もし面白い情報をキャッシュ上で見つけたら、すぐに保存することをお勧めします。私は[Google](https://support.google.com/websearch/answer/1687222?hl=en)、[Yandex](https://yandex.com/support/browser/personal-data-protection/cache-memory.html)、Bingなどの検索エンジンのキャッシュを使っています。
+
+* **インターネットアーカイブ**：[Internet Archive](https://archive.org/)は、インターネットに公開された全てを保存するという目的で動いているプロジェクトです。この中には、自動的にクローリング対象のWebページを保存するだけでなく、そのサイトの変遷も巨大なデータベースとして保存しています。彼らは、[Internet Archive Wayback Machine](https://web.archive.org/)と呼ばれるWebポータルを提供しており、Webサイトの変遷を分析する上で非常に優れた情報源です。一つ知っておくべき重要なことは、Internet Archiveは要請があればコンテンツを削除するということです。（実際、[Stalkerware company Flexispy](https://motherboard.vice.com/en_us/article/nekzzq/wayback-machine-deleting-evidence-flexispy)の件で、削除したことがあります）。そのため、保存しておく必要があるコンテンツは、別の場所に保存しておく必要があります。
+* **他の手動キャッシュプラットフォーム**：私は、Webページのスナップショットを保存でき手、他の人が取得したスナップショットを閲覧できる[archive.today](https://motherboard.vice.com/en_us/article/nekzzq/wayback-machine-deleting-evidence-flexispy)を好んで使っています。多くの調査でこのサイトへ依存しています。[perma.cc](https://perma.cc/)も良いですが、無料アカウントでは１か月１０リンクまでしか使えないという制限があり、プラットフォームは、図書館や大学に焦点を当てています。このソースコードは[オープンソース](https://github.com/harvard-lil/perma)で提供されており、キャッシュプラットフォームを独自で構築したいと考えた場合、間違えなくこのソフトを使うでしょう。
+Webキャッシュが存在するか一つづつ手作業で確認していくことはめんどくさいと考える人も多いでしょう。そのため、私は、Harpoonに簡単なコマンドを実装しました。
+```
+$ harpoon cache https://citizenlab.ca/2016/11/parliament-keyboy/
+Google: FOUND https://webcache.googleusercontent.com/search?q=cache%3Ahttps%3A%2F%2Fcitizenlab.ca%2F2016%2F11%2Fparliament-keyboy%2F&num=1&strip=0&vwsrc=1
+Yandex: NOT FOUND
+Archive.is: TIME OUT
+Archive.org: FOUND
+-2018-12-02 14:07:26: http://web.archive.org/web/20181202140726/https://citizenlab.ca/2016/11/parliament-keyboy/
+Bing: NOT FOUND
+```
