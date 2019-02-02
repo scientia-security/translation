@@ -119,3 +119,24 @@ OSINT用のツールはほかにも多数ありますが、全ての調査で有
 * **intitle**と**inurl**：タイトルやURLにフィルタを行います。
 * **link**：特定のURLへのリンクを持つWebサイトを探すことに特化します。（2017年に非推奨になりましたが、現在でも一部機能します）
 
+
+以下に例文を示します。
+* **NAME + CV + filetype:pdf**：この組み合わせは特定のCVを探し出すのに役立ちます。
+* **DOMAIN - site:DOMAIN**：Webサイトのサブドメインを探すのに役立ちます。
+* **SENTENCE - site:ORIGINDOMAIN**：特定の文章をコピーしたり剽窃したサイトを探し出します。
+
+よく詳しくなるためには、以下を参照してください。
+* [Mastering Google Search Operators in 67 Easy Steps](https://moz.com/blog/mastering-google-search-operators-in-67-steps)
+* [Google Hacking Database](https://www.exploit-db.com/google-hacking-database)
+
+# 画像
+画像の観点では、二つのことを知っておくべきでしょう。どのように画像に関する追加情報を探し出すか、そしてどのように類似した画像を探し出すかです。
+
+追加情報を探し出すためには、最初のステップとして、**EXIF情報**に注目しましょう。EXIF情報は、イメージが作成されたときに付与されるメタデータであり、作成時刻、使われたカメラの情報、さらにはGPS情報が付与されていることもある非常に面白い情報を含んでいます。これらを確認するため、私はコマンドラインツールである[ExifTool](http://owl.phy.queensu.ca/~phil/exiftool/)を使うことが多いですが、[Chrome](https://chrome.google.com/webstore/detail/exif-viewer/kbnpbnmjmgabkfemdehelbgdppngihhg)や[Firefox](https://addons.mozilla.org/en-US/firefox/addon/exif-viewer/)向けに提供されているExif Viewerアドオンも非常に使いやすいと思います。さらに、面白い機能を備えている[Photo Forensic website](https://29a.ch/photo-forensics/)を使うのも一つの手でしょう。(他の代替手段として、[exif.regex.info](http://exif.regex.info/exif.cgi)やFoto Forensics(https://fotoforensics.com/)も挙げられます)。
+似たようなイメージを探すためには、[Google Images](https://images.google.com/?hl=fr)、[Bing Images](https://www.bing.com/images/)、[Yandex Images](https://yandex.com/images/)、[TinyEye](https://tineye.com/)を使えばよいでしょう。TinyEyeは使いやすいAPIを提供しており（使い方は[ココ](http://www.automatingosint.com/blog/2015/11/osint-youtube-tineye-reverse-image-search/)を参照のこと）、Bingは[画像の特定の部分を使って検索すること](https://www.cnet.com/news/bing-visual-search-within-images/)ができる有益な機能を持っています。[remove.bg](https://www.remove.bg/)などのツールを使って、イメージのバックグラウンドを取り除くことで、より良い結果を得ることができます。
+例えば、場所を見つけ出すなど、画像の内容を分析する楽な方法はありません。どの国が候補に挙がるか推測するためには、画像の中に移りこんでいる特定の目印を探し出す必要があります。そして、ネット上で検索を行い、衛星画像と比較していく必要があります。このテクニックについて学ぶためには、Bellingcatが実施した興味深い調査結果が、[ココ](https://www.bellingcat.com/resources/case-studies/2015/03/03/stunt-geolocation-verifying-the-unverifiable/)や[ココ](https://www.bellingcat.com/resources/case-studies/2014/07/18/identifying-the-location-of-the-mh17-linked-missile-launcher-from-one-photograph/)にありますので参照してください。
+
+さらに学ぶためには、以下のリソースを参照してください。
+* Bellingcatによる[Metadata: MetaUseful & MetaCreepy](https://www.bellingcat.com/resources/how-tos/2015/04/24/metadata-metauseful-metacreepy/)
+* First Draft newsによる[The Visual Verification Guide](https://firstdraftnews.org/wp-content/uploads/2017/03/FDN_verificationguide_photos.pdf?x40896)
+
