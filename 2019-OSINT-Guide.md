@@ -2,7 +2,7 @@ OSINT 2019 Guide
 ====
 
 # 注意事項
-- 本資料は、セキュリティ専門家のTek氏に許可をもらい、ブログ記事[2019 OSINT Guide](https://www.randhome.io/blog/2019/01/05/2019-osint-guide/)を翻訳したものです。
+- 本資料は、セキュリティ専門家のTek氏に許可をもらい、ブログ記事『[2019 OSINT Guide](https://www.randhome.io/blog/2019/01/05/2019-osint-guide/)』を翻訳したものです。
 - 内容については、最大限の努力を持って正確に期していますが、本書の内容に基づく運用結果については責任を負いかねますので、ご了承ください。
 - 他の翻訳は、『[Scientia Securtity on GitHub](https://scientia-security.github.io/)』を参照してください。
 - ブログは『[セキュリティコンサルタントの日誌から](https://www.scientia-security.org/)』を参照してください。
