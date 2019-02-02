@@ -70,7 +70,7 @@ OSINT 2019 Guide
 [Maltego](https://www.paterva.com/web7/buy/maltego-clients/maltego.php)は、OSINTツールというより脅威インテリジェンスツールと呼ぶべきでしょう。しかしグラフは、調査データを分析し、表現するうえで最も良い方法になります。基本的に、Maltegoはグラフを表現し、グラフ内に新しいデータを見つけるために変換するためのGUIを提供してくれます（例えば、Passive DNSデータベースからドメインに紐づくIPアドレスなどを表示してくれます）。少し[高額](https://www.paterva.com/web7/quote.php)ですが、脅威インテリジェンスや攻撃基盤分析などをやっていればその価値はあるでしょう。（初年度999ドル。そして、ライセンス更新ごとに年499ドルです）。ほかにも、[Maltego Community Edition](https://www.paterva.com/web7/community/community.php)を使うこともできます。これは、データの変換やグラフのサイズなどに制約がありますが、小さい調査であれば十分すぎるほどの機能を提供してくれます。
 
 ![image](https://user-images.githubusercontent.com/23012571/52159364-bdca5c00-26e6-11e9-85bc-cbc76437b619.png)
-*Maltegoのスクリーンショット(Source : Paterva)*
+*Maltegoのスクリーンショット(情報源: Paterva)*
 
 
 ## Harpoon
@@ -82,3 +82,26 @@ $ harpoon pgp search tek@randhome.io
 ```
 さらに、[プラグイン](https://github.com/Te-k/harpoon)に関する長いリストがあります。ぜひ追加すべき新しい機能を思いついたら、提案あるいは開発、あるいは[リクエスト](https://github.com/Te-k/harpoon/issues)を挙げてください。
 
+## Python
+しばしば、ツールを使っても簡単には終わらない特定のデータ収集と可視化タスクを早く切り上げたいと思うでしょう。その場合、自分でコードを書く必要があります。私の場合、Pythonを使うことが多いです。最近のプログラミング言語であれば同様に目的を達成できますが、私はPythonが持つフレキシビリティと利用可能な多数のライブラリを活用するため、Pythonを選んでいます。
+Justin Seitz (Hunchlyの作者)は、PythonとOSINTについて言及していますので、彼のブログ[Automating OSINT](http://www.automatingosint.com/blog/)と彼の著書[Black Hat Python](https://nostarch.com/blackhatpython)はぜひ読んでみてください。
+
+## 他のツール
+OSINT用のツールはほかにも多数ありますが、全ての調査で有益とは言えないケースも多く経験しました。以下に、読者がチェックしておくべき他のツールを紹介します。個人的には、あまりフィットしませんでしたが、こうしたツールは非常に興味深く、良くできたツールです。
+
+* [SpiderFoot](https://www.spiderfoot.net/)は多数の異なるモジュールを持つ、偵察用ツールです。非常に良いWebインターフェースを持っており、異なるタイプのデータ感の関係性を示すグラフを生成してくれます。私がこのツールを好まない点は、利用者のために全てを見つけてきてくれる魔法のツールと考えられてしまう点です。しかし、何を探しているか理解し、結果を分析してくれるツールはありません。そう、自分自身で研究し、全ての結果を一つづつ読まなくてはいけません。良いツールでよいインターフェイスを持っていますが、SpiderFootはその点についてはあまり役に立ちません。
+![image](https://user-images.githubusercontent.com/23012571/52162445-6a243680-2717-11e9-8e45-c952b51f7c76.png)
+*SpiderFootのスクリーンショット(情報源:[spiderfoot.net](https://www.spiderfoot.net/))*
+
+* [recon-ng](https://bitbucket.org/LaNMaSteR53/recon-ng)は、素晴らしいCLIツールで、異なるプラットフォーム、ソーシャルメディア、脅威インテリジェンスプラットフォームから情報を取得することができます。正直、Harpoonに正直よく似ています。なぜ使わないかというと、Harpoonが自分ニーズに必要な機能を提供してくれており、提供されるシェルインターフェイスが苦手であるためです。
+* [Buscador](https://inteltechniques.com/buscador/)は、Linuxの仮想マシンで、異なるOSINTツールが含まれています。私は、いつも自分用にカスタマイズされたシステムを好みますが、ツールを一つづつインストールする手間なく新しいツールを試すことができる良い方法です。
+
+# さあ始めよう！！
+さて、それでは具体的な内容に入っていきましょう。OSINT調査において何が助けになるでしょか？
+
+## 技術的なインフラストラクチャ
+技術的インフラストラクチャの分析は、脅威インテリジェンスとオープンソースインテリジェンスが交差する点です。しかし、いくつかの点で調査の重要なパートになり得ます。
+さて、読者が探すべきは以下の通りです。
+
+* **IPとドメイン**: この目的のツールは多く存在しますが、[Passive Total](https://community.riskiq.com/)（現在は、RiskIQ）が最も良い情報源になると思います。Webインターフェイスから1日１５クエリまで、API経由でも１５クエリまで無料で使えます。ほとんどこのツールを使っていますが、[Robtex](https://www.robtex.com/)、[HackerTargetand](https://hackertarget.com/reverse-dns-lookup/)、[Security Trails](https://securitytrails.com/)も他の良い代替ツールになります。
+* **証明書**: [Censys](https://censys.io/)は素晴らしいツールです。しかし、より知られておらず少し劣りますが[crt.sh](https://crt.sh/)も非常によい証明書の透明性データベースです。
