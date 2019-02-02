@@ -53,8 +53,32 @@ OSINT 2019 Guide
 
 ## Chromeとプラグイン
 私は調査用ブラウザとして、Chromeを使います。なぜなら、HunchlyというツールがChromeでしか使えないためです。ここでは、さらに有益なプラグインを紹介しておきましょう。
-* archive.is Button は、archive.isに素早くWebページを保存することができます（詳細は後に記載）
-* Wayback Machineは、archive.orgの中にあるアーカイブされたページを検索します。
-* OpenSource Intelligenceは、多くのOSINTツールへの素早くアクセスできます。
-* EXIF Viewer は、イメージ内のEXIFデータを素早くみることができます。
-* FireShotは、スクリーンショットを素早くとることができます。
+* [archive.is Button](https://chrome.google.com/webstore/detail/archiveis-button/cgjpabpjaocpgppajkeplhbipbdippdm) は、archive.isに素早くWebページを保存することができます（詳細は後に記載）
+* [Wayback Machine](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak)は、archive.orgの中にあるアーカイブされたページを検索します。
+* [OpenSource Intelligence](https://chrome.google.com/webstore/detail/open-source-intelligence/bclnaepfegjimpinlmgnipebbknlmmbh)は、多くのOSINTツールへの素早くアクセスできます。
+* [EXIF Viewer](https://chrome.google.com/webstore/detail/exif-viewer/mmbhfeiddhndihdjeganjggkmjapkffm)は、イメージ内のEXIFデータを素早くみることができます。
+* [FireShot](https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg)は、スクリーンショットを素早くとることができます。
+
+## Hunchly
+私は最近、Hunchlyを使い始めましたが、非常に良いツールです。[Hunchly](https://hunch.ly/)はChromeのエクステンションであり、調査中に見つけた全てのWebデータをセーブ、タグづけ、検索することができます。基本的には、調査を開始するときにエクステンションにある「キャプチャ」のボタンをクリックするだけです。Hunchlyは、アクセスしたページ全てをデータベースに保存し、後でタグやノートを追加できるようにしてくれます。
+これは、年間130USDかかりますが、このツールがもたらす利便性に比べればそこまで高いとは言えないでしょう。
+
+![image](https://user-images.githubusercontent.com/23012571/52159352-590f0180-26e6-11e9-9ef1-b1f83280cd2f.png)
+*Hunchlyダッシュボードのスクリーンショット*
+
+## Maltego
+[Maltego](https://www.paterva.com/web7/buy/maltego-clients/maltego.php)は、OSINTツールというより脅威インテリジェンスツールと呼ぶべきでしょう。しかしグラフは、調査データを分析し、表現するうえで最も良い方法になります。基本的に、Maltegoはグラフを表現し、グラフ内に新しいデータを見つけるために変換するためのGUIを提供してくれます（例えば、Passive DNSデータベースからドメインに紐づくIPアドレスなどを表示してくれます）。少し[高額](https://www.paterva.com/web7/quote.php)ですが、脅威インテリジェンスや攻撃基盤分析などをやっていればその価値はあるでしょう。（初年度999ドル。そして、ライセンス更新ごとに年499ドルです）。ほかにも、[Maltego Community Edition](https://www.paterva.com/web7/community/community.php)を使うこともできます。これは、データの変換やグラフのサイズなどに制約がありますが、小さい調査であれば十分すぎるほどの機能を提供してくれます。
+
+![image](https://user-images.githubusercontent.com/23012571/52159364-bdca5c00-26e6-11e9-85bc-cbc76437b619.png)
+*Maltegoのスクリーンショット(Source : Paterva)*
+
+
+## Harpoon
+私は、[Harpoon](https://github.com/Te-k/harpoon)というコマンドラインツールを作成しました（このツールの詳細は、このブログ[記事](https://www.randhome.io/blog/2018/02/23/harpoon-an-osint-/-threat-intelligence-tool/)を参照してください）。これは脅威インテリジェンスツールとして作成しましたが、OSINT用コマンドを多数追加しました。これは、Linux環境にあるPython3で動き、オープンソースです。（多分、MacOSとWindowsOSでも動くと思います）
+例えば、キーサーバーにあるPGPキーを探す際には、Harpoonを以下のように使います。
+```
+$ harpoon pgp search tek@randhome.io
+[+] 0xDCB55433A1EA7CAB  2016-05-30      Tek__ tek@randhome.io
+```
+さらに、[プラグイン](https://github.com/Te-k/harpoon)に関する長いリストがあります。ぜひ追加すべき新しい機能を思いついたら、提案あるいは開発、あるいは[リクエスト](https://github.com/Te-k/harpoon/issues)を挙げてください。
+
