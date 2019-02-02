@@ -153,12 +153,47 @@ OSINT用のツールはほかにも多数ありますが、全ての調査で有
 * **インターネットアーカイブ**：[Internet Archive](https://archive.org/)は、インターネットに公開された全てを保存するという目的で動いているプロジェクトです。この中には、自動的にクローリング対象のWebページを保存するだけでなく、そのサイトの変遷も巨大なデータベースとして保存しています。彼らは、[Internet Archive Wayback Machine](https://web.archive.org/)と呼ばれるWebポータルを提供しており、Webサイトの変遷を分析する上で非常に優れた情報源です。一つ知っておくべき重要なことは、Internet Archiveは要請があればコンテンツを削除するということです。（実際、[Stalkerware company Flexispy](https://motherboard.vice.com/en_us/article/nekzzq/wayback-machine-deleting-evidence-flexispy)の件で、削除したことがあります）。そのため、保存しておく必要があるコンテンツは、別の場所に保存しておく必要があります。
 * **他の手動キャッシュプラットフォーム**：私は、Webページのスナップショットを保存でき手、他の人が取得したスナップショットを閲覧できる[archive.today](https://motherboard.vice.com/en_us/article/nekzzq/wayback-machine-deleting-evidence-flexispy)を好んで使っています。多くの調査でこのサイトへ依存しています。[perma.cc](https://perma.cc/)も良いですが、無料アカウントでは１か月１０リンクまでしか使えないという制限があり、プラットフォームは、図書館や大学に焦点を当てています。このソースコードは[オープンソース](https://github.com/harvard-lil/perma)で提供されており、キャッシュプラットフォームを独自で構築したいと考えた場合、間違えなくこのソフトを使うでしょう。
 Webキャッシュが存在するか一つづつ手作業で確認していくことはめんどくさいと考える人も多いでしょう。そのため、私は、Harpoonに簡単なコマンドを実装しました。
-```
-$ harpoon cache https://citizenlab.ca/2016/11/parliament-keyboy/
-Google: FOUND https://webcache.googleusercontent.com/search?q=cache%3Ahttps%3A%2F%2Fcitizenlab.ca%2F2016%2F11%2Fparliament-keyboy%2F&num=1&strip=0&vwsrc=1
-Yandex: NOT FOUND
-Archive.is: TIME OUT
-Archive.org: FOUND
--2018-12-02 14:07:26: http://web.archive.org/web/20181202140726/https://citizenlab.ca/2016/11/parliament-keyboy/
-Bing: NOT FOUND
-```
+![image](https://user-images.githubusercontent.com/23012571/52163085-752f9480-2720-11e9-9da3-86624a33dbc4.png)
+
+さらに、以前言及した[Hunchly](https://hunch.ly/)は、「レコーディング」機能を有効にした場合、アクセスしたあらゆるページをローカルアーカイブに自動的に保存してくれることも覚えておく必要があります。
+
+# 証拠の取得
+次のポイントに移りましょう。それは、証拠の取得です。証拠の取得は、調査における重要なフェーズの一つです。特に、調査が長引く場合には非常に重要です。間違えなく、Webサイトが変更された、Twitterアカウントが削除されたなど、何度か自分が見つけた証拠をなくす経験をするでしょう。
+![image](https://user-images.githubusercontent.com/23012571/52163096-b031c800-2720-11e9-9acb-c445ab8f9ee2.png)
+
+
+覚えておくべきことは、以下の通りです。
+* Internet Archiveに完全に依存することは難しいですので、他のキャッシュプラットフォームや可能であればローカルに保存することをお勧めします。
+* 画像、文書を保存しましょう。
+* スクリーンショットを取得しましょう。
+* ソーシャルメディアに関する情報を保存しましょう。攻撃者はいつでもこうした情報を削除することができます。（Twitterアカウントにおいては、Harpoonは、ツイートとユーザ情報をJSON形式のファイルで保存するコマンドを用意しています。）
+
+さらに勉強するためには、以下のリソースをご覧ください。
+* [How to Archive Open Source Materials](https://www.bellingcat.com/resources/how-tos/2018/02/22/archive-open-source-materials/)（Aric Toler from Bellingcat）
+
+# 短縮URL
+短縮URLは、利用する際に非常に興味深い情報をもたらします。異なるサービスにおいて、統計情報を取得する方法をまとめました。
+* **bit.ly**：URLの最後に、[https://bitly.com/aa+](https://bitly.com/aa+) のように **+** を追加してください。
+* **goo.gl**：（もうすぐ非推奨になりますが）URLの最後に **+** を追加することで、**https://goo.gl/#analytics/goo.gl/[ID HERE]/all_time** のようになURLへリダイレクトします。
+* **ow.ly**：hootsuite社が提供する短縮URLサービスですが、統計情報を見ることはできません。
+* **tinyurl.com**：統計情報を取得できませんが、**http://preview.tinyurl.com/[id]** にすることでURL自体をみることができます。
+* **tiny.cc**：**https://tiny.cc/06gkny~** のように**~** をつければ、統計情報を見ることができます。
+* **bit.do**：**http://bit.do/dSytb-** にハイフン（-）をつければ、情報を取得することができます。(統計情報は非公開の場合があります)
+* **adf.ly**：この短縮URLは、リンクへのリダイレクト時に広告を表示することで収益を上げることを提案しているサービスです。彼らは、**j.gs**や**q.gs**などその他のサブドメインを多数利用し、公開の統計情報を閲覧することができません。
+* **tickurl.com**：**https://tickurl.com/i9zkh+** のように **+** をつければ統計情報へアクセスできます。
+
+いくつかの短縮URLは連番のIDが使われている可能性があります。その場合、同時刻に作成された似たようなURLを推測できる可能性があります。このアイディアの事例は[このレポート](https://citizenlab.ca/2017/05/tainted-leaks-disinformation-phish/)を参照してください。
+
+# 企業情報
+いくつかのデータベースでは、企業情報を検索することが可能です。メインで利用されるものは、[Open Corporates](https://opencorporates.com/)や[OCCRP database of leaks and public records](https://data.occrp.org/)が挙げられます。その後、各国に応じたデータベースに依存していきます。例えば、フランスでは[societe.com](https://www.societe.com/)が有名ですし、米国であれば[EDGAR](https://www.sec.gov/edgar/searchedgar/webusers.htm)へ、イギリスであれば[Company House](https://beta.companieshouse.gov.uk/)へアクセスすべきでしょう（より詳細な情報は [ココ](ttps://www.bellingcat.com/resources/how-tos/2017/06/23/companies-house-short-guide/)から参照してください）。
+
+# 参考文献
+OSINTを学ぶ上で更なるリソースとしていかが挙げられます。
+* Bellingcatによる貴重なリソース：[ガイド](https://www.bellingcat.com/category/resources/how-tos/)とコミュニティが作成した[情報リスト](https://docs.google.com/document/d/1BfLPJpRtyq4RFtHJoNpvWQjmGnyVkfE2HYoICKOGguA/edit)
+* The Github repository：[Awesome OSINT](https://github.com/jivoi/awesome-osint)
+* [The OSINT framework](https://osintframework.com/)
+* [osint.link](http://osint.link/)
+
+これですべてです。時間をかけてこのブログを読んでくれてありがとうございます。もし追加すべきリソースがあればTwitterなどから気軽にコンタクトしてください。
+このブログ投稿は、[Nils Frahm](https://www.youtube.com/watch?v=izhGLGPmvIU)を聞きながら書きました。
+更新１：[Yandex Images](https://yandex.com/images/)、[remove Background](https://www.remove.bg/)、[Photo Forensic](https://29a.ch/photo-forensics/#forensic-magnifier)を追加しました。このテクニックを教えてくれた[Jean-Marc Manach](https://twitter.com/manhack/status/1081945710638059523)と[fo0](https://twitter.com/fo0_)に感謝します。
