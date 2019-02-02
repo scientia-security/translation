@@ -105,6 +105,17 @@ OSINT用のツールはほかにも多数ありますが、全ての調査で有
 
 * **IPとドメイン**：この目的のツールは多く存在しますが、[Passive Total](https://community.riskiq.com/)（現在は、RiskIQ）が最も良い情報源になると思います。Webインターフェイスから1日１５クエリまで、API経由でも１５クエリまで無料で使えます。ほとんどこのツールを使っていますが、[Robtex](https://www.robtex.com/)、[HackerTargetand](https://hackertarget.com/reverse-dns-lookup/)、[Security Trails](https://securitytrails.com/)も他の良い代替ツールになります。
 * **証明書**: [Censys](https://censys.io/)は素晴らしいツールです。しかし、より知られておらず少し劣りますが[crt.sh](https://crt.sh/)も非常によい証明書の透明性データベースです。
-* **スキャン**：IPアドレス上でどのようなサービスが動いているか確認することは有益です。[Nmap](https://nmap.org/)を使って自分でスキャンすることもできますが、全てのIPv4アドレスに定期的にスキャンしてくれるプラットフォームを活用することもできます。その二つのプラットフォームこそ、[Censys](https://nmap.org/)と[Shodan](https://www.shodan.io/)です。この二つは異なる側面に焦点を当てており、それぞれの特徴を知り、両方を使いこなす必要があります（ShodanはIoTに焦点を置いており、CensysはTLSに焦点を置いています）。[BinaryEdge](https://www.shodan.io/)は最近登場し急速に発展している代替とプラットフォームです。より最近では、[Fofa](https://fofa.so/)と呼ばれる中国プラットフォームが登場しました。別の情報源として、[Rapid7 Open Data](https://opendata.rapid7.com/)が挙げられますが、スキャンファイルをダウンロードする必要があり、自分で分析を行う必要があります。最後にIPアドレスに関する時系列データはプラットフォームの変遷を理解する上で金脈となることを指摘したいと思います。Censysはこうしたデータを有償プランでしか提供してくれません（アカデミックの研究者は無料で利用することができます）が、ShodanはIPごとにこうしたデータを提供してくれ、非常に素晴らしいです。 harpoon shodan ip -H IPがコマンドがもたらす内容はぜひ確認してください（Shodanのライフアカウントを支払う必要があります）
-•	脅威情報: OSINTではあまり重要ではありませんが、ドメイン、IP、URLに対する悪性のアクティビティを確認することは常に興味深いことを教えてくれます。これを行うために、私はPassive Totalと AlienVault OTXに依存しています。
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+* **スキャン**：IPアドレス上でどのようなサービスが動いているか確認することは有益です。[Nmap](https://nmap.org/)を使って自分でスキャンすることもできますが、全てのIPv4アドレスに定期的にスキャンしてくれるプラットフォームを活用することもできます。その二つのプラットフォームこそ、[Censys](https://nmap.org/)と[Shodan](https://www.shodan.io/)です。この二つは異なる側面に焦点を当てており、それぞれの特徴を知り、両方を使いこなす必要があります（ShodanはIoTに焦点を置いており、CensysはTLSに焦点を置いています）。[BinaryEdge](https://www.shodan.io/)は最近登場し急速に発展している代替とプラットフォームです。より最近では、[Fofa](https://fofa.so/)と呼ばれる中国プラットフォームが登場しました。別の情報源として、[Rapid7 Open Data](https://opendata.rapid7.com/)が挙げられますが、スキャンファイルをダウンロードする必要があり、自分で分析を行う必要があります。最後にIPアドレスに関する時系列データはプラットフォームの変遷を理解する上で金脈となることを指摘したいと思います。Censysはこうしたデータを有償プランでしか提供してくれません（アカデミックの研究者は無料で利用することができます）が、ShodanはIPごとにこうしたデータを提供してくれ、非常に素晴らしいです。**harpoon shodan ip -H IP**がコマンドがもたらす内容はぜひ確認してください（Shodanのライフアカウントを支払う必要があります）
+* **脅威情報**：OSINTではあまり重要ではありませんが、ドメイン、IP、URLに対する悪性のアクティビティを確認することは常に興味深いことを教えてくれます。これを行うために、私は[Passive Total](https://community.riskiq.com/)と[AlienVault OTX](https://otx.alienvault.com/)に依存しています。
+* **サブドメイン**：あるドメインに対するサブドメインのリストを取得する方法は様々あります。例えば、Google検索（Site：ドメイン）を使う方法から、証明書に記載されている代替ドメインを探す方法などが挙げられます。[Passive Total](https://community.riskiq.com/)、[BinaryEdge](https://www.shodan.io/)は、この機能を実装しています。そのため、初期リストを得るためであれば、こうしたサービスに直接クエリを投げることが手っ取り早いでしょう。
+* **Googleアナリティックスとソーシャルメディア**：最後の情報は、とても興味深いもので、複数のwebサイトで、同じGoogleアナリティックス・アドセンスIDを使っているか確認することです。このテクニックは2015年発表され、[ココ](https://www.bellingcat.com/resources/how-tos/2015/07/23/unveiling-hidden-connections-with-google-analytics-ids/)に詳しく書かれています。こうしたコネクションを探すためには、私は[Passive Total](https://community.riskiq.com/)、[SpyOnWeb](http://spyonweb.com/)、[NerdyData](https://nerdydata.com/)を使っています。 ([publicwww](https://publicwww.com/)は、別の有償サービスとして知られています)。
+
+# 検索エンジン
+コンテキストに依存して、調査中は異なる検索エンジンを使い分けてるかもしれません。私は、そのほとんどをGoogle、Bing（欧州・北米用）、Baidu（アジア用）、Yandex（ロシア・東ヨーロッパ）に依存しています。
+もちろん、最も基礎的な調査ツールは、検索演算子です。Googleの検索演算子のリストは[ココ](http://www.googleguide.com/advanced_operators_reference.html)にあります。以下に最も興味深いものを抜粋しました。
+* 以下のブーリアン型の論理演算子を使いクエリを結合することができます。**AND**、**OR**、**+**、**-**
+* **filetype**：特定のファイル拡張子を検索を行います。
+* **site**：特定のWebサイトへフィルタを書けます。
+* **intitle**と**inurl**：タイトルやURLにフィルタを行います。
+* **link**：特定のURLへのリンクを持つWebサイトを探すことに特化します。（2017年に非推奨になりましたが、現在でも一部機能します）
+
