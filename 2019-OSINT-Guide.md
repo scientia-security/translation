@@ -162,17 +162,22 @@ OSINTツールはほかにも多数ありますが、全ての調査で有益と
 
 # キャッシュプラットフォーム
 調査時において、素晴らしい情報源になるものの一つに、Webサイトのキャッシュを作成するプラットフォーム群が挙げられます。なぜなら、Webサイトは押したり、Webサイトの時系列的な変遷を分析できるためです。こうしたプラットフォームは、自動的にWebサイトをキャッシュするものもあれば、リクエストに応じてキャッシュするものもあります。
-* **検索エンジン**：多くの検索エンジンは、クローリングしたときのWebサイトのコンテンツをキャッシュとして保存します。これは非常に有益であり、多くのサイトのキャッシュを見ることができます。但し、最後にキャッシュされるタイミング（多くの場合１週間以内だと思います）を管理できないこと、すぐに削除されてしまう事実も抑えておく必要があります。そのため、もし面白い情報をキャッシュ上で見つけたら、すぐに保存することをお勧めします。私は[Google](https://support.google.com/websearch/answer/1687222?hl=en)、[Yandex](https://yandex.com/support/browser/personal-data-protection/cache-memory.html)、Bingなどの検索エンジンのキャッシュを使っています。
 
-* **インターネットアーカイブ**：[Internet Archive](https://archive.org/)は、インターネットに公開された全てを保存するという目的で動いているプロジェクトです。この中には、自動的にクローリング対象のWebページを保存するだけでなく、そのサイトの変遷も巨大なデータベースとして保存しています。彼らは、[Internet Archive Wayback Machine](https://web.archive.org/)と呼ばれるWebポータルを提供しており、Webサイトの変遷を分析する上で非常に優れた情報源です。一つ知っておくべき重要なことは、Internet Archiveは要請があればコンテンツを削除するということです。（実際、[Stalkerware company Flexispy](https://motherboard.vice.com/en_us/article/nekzzq/wayback-machine-deleting-evidence-flexispy)の件で、削除したことがあります）。そのため、保存しておく必要があるコンテンツは、別の場所に保存しておく必要があります。
-* **他の手動キャッシュプラットフォーム**：私は、Webページのスナップショットを保存でき手、他の人が取得したスナップショットを閲覧できる[archive.today](https://motherboard.vice.com/en_us/article/nekzzq/wayback-machine-deleting-evidence-flexispy)を好んで使っています。多くの調査でこのサイトへ依存しています。[perma.cc](https://perma.cc/)も良いですが、無料アカウントでは１か月１０リンクまでしか使えないという制限があり、プラットフォームは、図書館や大学に焦点を当てています。このソースコードは[オープンソース](https://github.com/harvard-lil/perma)で提供されており、キャッシュプラットフォームを独自で構築したいと考えた場合、間違えなくこのソフトを使うでしょう。
+**検索エンジン**：多くの検索エンジンは、クローリングしたときのWebサイトのコンテンツをキャッシュとして保存します。これは非常に有益であり、多くのサイトのキャッシュを見ることができます。但し、最後にキャッシュされるタイミング（多くの場合１週間以内だと思います）を管理できないこと、すぐに削除されてしまう事実も抑えておく必要があります。そのため、もし面白い情報をキャッシュ上で見つけたら、すぐに保存することをお勧めします。私は[Google](https://support.google.com/websearch/answer/1687222?hl=en)、[Yandex](https://yandex.com/support/browser/personal-data-protection/cache-memory.html)、Bingなどの検索エンジンのキャッシュを使っています。
+
+**インターネットアーカイブ**：[Internet Archive](https://archive.org/)は、インターネットに公開された全てを保存するという目的で動いているプロジェクトです。この中には、自動的にクローリング対象のWebページを保存するだけでなく、そのサイトの変遷も巨大なデータベースとして保存しています。彼らは、[Internet Archive Wayback Machine](https://web.archive.org/)と呼ばれるWebポータルを提供しており、Webサイトの変遷を分析する上で非常に優れた情報源です。一つ知っておくべき重要なことは、Internet Archiveは要請があればコンテンツを削除するということです。（実際、[Stalkerware company Flexispy](https://motherboard.vice.com/en_us/article/nekzzq/wayback-machine-deleting-evidence-flexispy)の件で、削除したことがあります）。そのため、保存しておく必要があるコンテンツは、別の場所に保存しておく必要があります。
+
+**他の手動キャッシュプラットフォーム**：私は、Webページのスナップショットを保存でき手、他の人が取得したスナップショットを閲覧できる[archive.today](https://motherboard.vice.com/en_us/article/nekzzq/wayback-machine-deleting-evidence-flexispy)を好んで使っています。多くの調査でこのサイトへ依存しています。[perma.cc](https://perma.cc/)も良いですが、無料アカウントでは１か月１０リンクまでしか使えないという制限があり、プラットフォームは、図書館や大学に焦点を当てています。このソースコードは[オープンソース](https://github.com/harvard-lil/perma)で提供されており、キャッシュプラットフォームを独自で構築したいと考えた場合、間違えなくこのソフトを使うでしょう。
+
 Webキャッシュが存在するか一つづつ手作業で確認していくことはめんどくさいと考える人も多いでしょう。そのため、私は、Harpoonに簡単なコマンドを実装しました。
+
 ![image](https://user-images.githubusercontent.com/23012571/52163085-752f9480-2720-11e9-9da3-86624a33dbc4.png)
 
 さらに、以前言及した[Hunchly](https://hunch.ly/)は、「レコーディング」機能を有効にした場合、アクセスしたあらゆるページをローカルアーカイブに自動的に保存してくれることも覚えておく必要があります。
 
 # 証拠の取得
 次のポイントに移りましょう。それは、証拠の取得です。証拠の取得は、調査における重要なフェーズの一つです。特に、調査が長引く場合には非常に重要です。間違えなく、Webサイトが変更された、Twitterアカウントが削除されたなど、何度か自分が見つけた証拠をなくす経験をするでしょう。
+
 ![image](https://user-images.githubusercontent.com/23012571/52163096-b031c800-2720-11e9-9acb-c445ab8f9ee2.png)
 
 
@@ -187,11 +192,12 @@ Webキャッシュが存在するか一つづつ手作業で確認していく�
 
 # 短縮URL
 短縮URLは、利用する際に非常に興味深い情報をもたらします。異なるサービスにおいて、統計情報を取得する方法をまとめました。
+
 * **bit.ly**：URLの最後に、[https://bitly.com/aa+](https://bitly.com/aa+) のように **+** を追加してください。
 * **goo.gl**：（もうすぐ非推奨になりますが）URLの最後に **+** を追加することで、**https://goo.gl/#analytics/goo.gl/[ID HERE]/all_time** のようになURLへリダイレクトします。
 * **ow.ly**：hootsuite社が提供する短縮URLサービスですが、統計情報を見ることはできません。
 * **tinyurl.com**：統計情報を取得できませんが、**http://preview.tinyurl.com/[id]** にすることでURL自体をみることができます。
-* **tiny.cc**：**https://tiny.cc/06gkny~** のように**~** をつければ、統計情報を見ることができます。
+* **tiny.cc**：**https://tiny.cc/06gkny~** のように **~** をつければ、統計情報を見ることができます。
 * **bit.do**：**http://bit.do/dSytb-** にハイフン（-）をつければ、情報を取得することができます。(統計情報は非公開の場合があります)
 * **adf.ly**：この短縮URLは、リンクへのリダイレクト時に広告を表示することで収益を上げることを提案しているサービスです。彼らは、**j.gs**や**q.gs**などその他のサブドメインを多数利用し、公開の統計情報を閲覧することができません。
 * **tickurl.com**：**https://tickurl.com/i9zkh+** のように **+** をつければ統計情報へアクセスできます。
