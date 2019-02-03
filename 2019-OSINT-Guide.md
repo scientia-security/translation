@@ -205,7 +205,7 @@ Webキャッシュが存在するか一つづつ手作業で確認していく�
 いくつかの短縮URLは連番のIDが使われている可能性があります。その場合、同時刻に作成された似たようなURLを推測できる可能性があります。このアイディアの事例は[このレポート](https://citizenlab.ca/2017/05/tainted-leaks-disinformation-phish/)を参照してください。
 
 # 企業情報
-いくつかのデータベースでは、企業情報を検索することが可能です。メインで利用されるものは、[Open Corporates](https://opencorporates.com/)や[OCCRP database of leaks and public records](https://data.occrp.org/)が挙げられます。その後、各国に応じたデータベースに依存していきます。例えば、フランスでは[societe.com](https://www.societe.com/)が有名ですし、米国であれば[EDGAR](https://www.sec.gov/edgar/searchedgar/webusers.htm)へ、イギリスであれば[Company House](https://beta.companieshouse.gov.uk/)へアクセスすべきでしょう（より詳細な情報は [ココ](ttps://www.bellingcat.com/resources/how-tos/2017/06/23/companies-house-short-guide/)から参照してください）。
+いくつかのデータベースでは、企業情報を検索することが可能です。メインで利用されるものは、[Open Corporates](https://opencorporates.com/)や[OCCRP database of leaks and public records](https://data.occrp.org/)が挙げられます。その後、各国に応じたデータベースに依存していきます。例えば、フランスでは[societe.com](https://www.societe.com/)が有名ですし、米国であれば[EDGAR](https://www.sec.gov/edgar/searchedgar/webusers.htm)へ、イギリスであれば[Company House](https://beta.companieshouse.gov.uk/)へアクセスすべきでしょう（より詳細な情報は [ココ](https://www.bellingcat.com/resources/how-tos/2017/06/23/companies-house-short-guide/)から参照してください）。
 
 # 参考文献
 OSINTを学ぶ上で更なるリソースとしていかが挙げられます。
