@@ -214,7 +214,9 @@ OSINTを学ぶ上で更なるリソースとしていかが挙げられます。
 * [The OSINT framework](https://osintframework.com/)
 * [osint.link](http://osint.link/)
 
-これですべてです。時間をかけてこのブログを読んでくれてありがとうございます。もし追加すべきリソースがあればTwitterなどから気軽にコンタクトしてください。
+これですべてです。時間をかけてこのブログを読んでくれてありがとうございます。もし追加すべきリソースがあれば[Twitter](https://twitter.com/tenacioustek)などから気軽にコンタクトしてください。
+
 このブログ投稿は、[Nils Frahm](https://www.youtube.com/watch?v=izhGLGPmvIU)を聞きながら書きました。
+
 更新１：[Yandex Images](https://yandex.com/images/)、[remove Background](https://www.remove.bg/)、[
 Forensic](https://29a.ch/photo-forensics/#forensic-magnifier)を追加しました。このテクニックを教えてくれた[Jean-Marc Manach](https://twitter.com/manhack/status/1081945710638059523)と[fo0](https://twitter.com/fo0_)に感謝します。
