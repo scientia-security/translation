@@ -111,6 +111,7 @@ OSINTツールはほかにも多数ありますが、全ての調査で有益と
 
 ## 技術的なインフラストラクチャ
 技術的インフラストラクチャの分析は、脅威インテリジェンスとオープンソースインテリジェンスが交差する点です。しかし、いくつかの点で調査の重要なパートになり得ます。
+
 さて、読者が探すべきは以下の通りです。
 
 * **IPとドメイン**：この目的のツールは多く存在しますが、[Passive Total](https://community.riskiq.com/)（現在は、RiskIQ）が最も良い情報源になると思います。Webインターフェイスから1日１５クエリまで、API経由でも１５クエリまで無料で使えます。ほとんどこのツールを使っていますが、[Robtex](https://www.robtex.com/)、[HackerTargetand](https://hackertarget.com/reverse-dns-lookup/)、[Security Trails](https://securitytrails.com/)も他の良い代替ツールになります。
@@ -142,8 +143,10 @@ OSINTツールはほかにも多数ありますが、全ての調査で有益と
 # 画像
 画像の観点では、二つのことを知っておくべきでしょう。どのように画像に関する追加情報を探し出すか、そしてどのように類似した画像を探し出すかです。
 
-追加情報を探し出すためには、最初のステップとして、**EXIF情報**に注目しましょう。EXIF情報は、イメージが作成されたときに付与されるメタデータであり、作成時刻、使われたカメラの情報、さらにはGPS情報が付与されていることもある非常に面白い情報を含んでいます。これらを確認するため、私はコマンドラインツールである[ExifTool](http://owl.phy.queensu.ca/~phil/exiftool/)を使うことが多いですが、[Chrome](https://chrome.google.com/webstore/detail/exif-viewer/kbnpbnmjmgabkfemdehelbgdppngihhg)や[Firefox](https://addons.mozilla.org/en-US/firefox/addon/exif-viewer/)向けに提供されているExif Viewerアドオンも非常に使いやすいと思います。さらに、面白い機能を備えている[Photo Forensic website](https://29a.ch/photo-forensics/)使うのも一つの手でしょう。（他の代替手段として、[exif.regex.info](http://exif.regex.info/exif.cgi)やFoto Forensics(https://fotoforensics.com/)も挙げられます）。
+追加情報を探し出すためには、最初のステップとして、**EXIF情報**に注目しましょう。EXIF情報は、イメージが作成されたときに付与されるメタデータであり、作成時刻、使われたカメラの情報、さらにはGPS情報が付与されていることもある非常に面白い情報を含んでいます。これらを確認するため、私はコマンドラインツールである[ExifTool](http://owl.phy.queensu.ca/~phil/exiftool/)を使うことが多いですが、[Chrome](https://chrome.google.com/webstore/detail/exif-viewer/kbnpbnmjmgabkfemdehelbgdppngihhg)や[Firefox](https://addons.mozilla.org/en-US/firefox/addon/exif-viewer/)向けに提供されているExif Viewerアドオンも非常に使いやすいと思います。さらに、面白い機能を備えている[Photo Forensic website](https://29a.ch/photo-forensics/)使うのも一つの手でしょう。（他の代替手段として、[exif.regex.info](http://exif.regex.info/exif.cgi)や[Foto Forensics](https://fotoforensics.com/)も挙げられます）。
+
 似たようなイメージを探すためには、[Google Images](https://images.google.com/?hl=fr)、[Bing Images](https://www.bing.com/images/)、[Yandex Images](https://yandex.com/images/)、[TinyEye](https://tineye.com/)を使えばよいでしょう。TinyEyeは使いやすいAPIを提供しており（使い方は[ココ](http://www.automatingosint.com/blog/2015/11/osint-youtube-tineye-reverse-image-search/)を参照のこと）、Bingは[画像の特定の部分を使って検索すること](https://www.cnet.com/news/bing-visual-search-within-images/)ができる有益な機能を持っています。[remove.bg](https://www.remove.bg/)などのツールを使って、イメージのバックグラウンドを取り除くことで、より良い結果を得ることができます。
+
 例えば、場所を見つけ出すなど、画像の内容を分析する楽な方法はありません。どの国が候補に挙がるか推測するためには、画像の中に移りこんでいる特定の目印を探し出す必要があります。そして、ネット上で検索を行い、衛星画像と比較していく必要があります。このテクニックについて学ぶためには、Bellingcatが実施した興味深い調査結果が、[ココ](https://www.bellingcat.com/resources/case-studies/2015/03/03/stunt-geolocation-verifying-the-unverifiable/)や[ココ](https://www.bellingcat.com/resources/case-studies/2014/07/18/identifying-the-location-of-the-mh17-linked-missile-launcher-from-one-photograph/)にありますので参照してください。
 
 さらに学ぶためには、以下のリソースを参照してください。
