@@ -41,7 +41,9 @@ OSINT 2019 Guide
 
 # 自分のシステムを準備する
 調査に入る前に、調査対象の人たちに警戒されないようにOpSecの観点から考えるべきことがあります。目立たない個人のWebサイトへアクセスすればIPアドレスを露呈することになり、自身の場所や所属をさらすことになります。ほかにも、個人のソーシャルメディアアカウントを利用し、間違って「Like」ボタンを押してしまう可能性も考えられるでしょう。
+
 そのため、自分が調査する時は以下のルールに従うようにしています。
+
 * **調査用ブラウザからの全てのアクセスは、商用のVPNやTORを利用することです。** 多くの商用VPNは、異なる国でサーバを提供しており、Torは[出口ノードとして特定の国を選択すること](https://www.wikihow.com/Set-a-Specific-Country-in-a-Tor-Browser)ができます。そのため、国を選択することで、不用意なコンテキストとその痕跡を残さずに済みます（USの組織から、USのために調査を実施しているなど）
 * スキャンやクローリングのタスクは、自分との関係性がない安いVPSから行う必要があります。
 * 調査専用のソーシャルメディアアカウントを利用し、偽名で作成します。
@@ -77,22 +79,27 @@ OSINT 2019 Guide
 
 
 ## Harpoon
-私は、[Harpoon](https://github.com/Te-k/harpoon)というコマンドラインツールを作成しました（このツールの詳細は、このブログ[記事](https://www.randhome.io/blog/2018/02/23/harpoon-an-osint-/-threat-intelligence-tool/)を参照してください）。これは脅威インテリジェンスツールとして作成しましたが、OSINT用コマンドを多数追加しました。これは、Linux環境にあるPython3で動き、オープンソースです。（多分、MacOSとWindowsOSでも動くと思います）
+私は、[Harpoon](https://github.com/Te-k/harpoon)というコマンドラインツールを作成しました（このツールの詳細は、このブログ[記事](https://www.randhome.io/blog/2018/02/23/harpoon-an-osint-/-threat-intelligence-tool/)を参照してください）。これは脅威インテリジェンスツールとして作成しましたが、OSINT用コマンドを多数追加しました。これは、Linux環境にあるPython3で動き、オープンソースです（多分、MacOSとWindowsOSでも動くと思います）。
+
 例えば、キーサーバーにあるPGPキーを探す際には、Harpoonを以下のように使います。
+
 ```
 $ harpoon pgp search tek@randhome.io
 [+] 0xDCB55433A1EA7CAB  2016-05-30      Tek__ tek@randhome.io
 ```
+
 さらに、[プラグイン](https://github.com/Te-k/harpoon)に関する長いリストがあります。ぜひ追加すべき新しい機能を思いついたら、提案あるいは開発、あるいは[リクエスト](https://github.com/Te-k/harpoon/issues)を挙げてください。
 
 ## Python
 しばしば、ツールを使っても簡単には終わらない特定のデータ収集と可視化タスクを早く切り上げたいと思うでしょう。その場合、自分でコードを書く必要があります。私の場合、Pythonを使うことが多いです。最近のプログラミング言語であれば同様に目的を達成できますが、私はPythonが持つフレキシビリティと利用可能な多数のライブラリを活用するため、Pythonを選んでいます。
+
 Justin Seitz (Hunchlyの作者)は、PythonとOSINTについて言及していますので、彼のブログ[Automating OSINT](http://www.automatingosint.com/blog/)と彼の著書[Black Hat Python](https://nostarch.com/blackhatpython)はぜひ読んでみてください。
 
 ## 他のツール
 OSINT用のツールはほかにも多数ありますが、全ての調査で有益とは言えないケースも多く経験しました。以下に、読者がチェックしておくべき他のツールを紹介します。個人的には、あまりフィットしませんでしたが、こうしたツールは非常に興味深く、良くできたツールです。
 
 * [SpiderFoot](https://www.spiderfoot.net/)は多数の異なるモジュールを持つ、偵察用ツールです。非常に良いWebインターフェースを持っており、異なるタイプのデータ感の関係性を示すグラフを生成してくれます。私がこのツールを好まない点は、利用者のために全てを見つけてきてくれる魔法のツールと考えられてしまう点です。しかし、何を探しているか理解し、結果を分析してくれるツールはありません。そう、自分自身で研究し、全ての結果を一つづつ読まなくてはいけません。良いツールでよいインターフェイスを持っていますが、SpiderFootはその点についてはあまり役に立ちません。
+
 ![image](https://user-images.githubusercontent.com/23012571/52162445-6a243680-2717-11e9-8e45-c952b51f7c76.png)
 *SpiderFootのスクリーンショット(情報源:[spiderfoot.net](https://www.spiderfoot.net/))*
 
