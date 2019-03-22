@@ -35,6 +35,12 @@ Equifaxは、この情報漏洩の影響を最小化し、未然に防ぐため�
 Equifaxは、情報漏洩について責任を負う役員を数名指名しました。しかし、このアナウンスの８日後の9月15日、CIOとCSO（最高セキュリティ責任者）はどちらも早期退職し、CEOであるRichard Smith氏は9月26日に辞任します。10月2日、EquifaxはApache Strutsの脆弱性に関する電子メールの転送に失敗したという　理由で、SVP（Senior Vice President）兼Global Corporate Platforms担当CIOを務めるGraeme Payne氏を解雇しました。7年間優秀な従業員として活躍し、400名近くの上級管理職を務めるPayne氏は、ACISを含むEquifax内の多数のITシステムを管理していました。 10月3日、Richard Smith氏は、人為的なミスと、情報漏洩の根本原因としてパッチを適用する必要性を伝えることに失敗したことを非難する議会の前で証言をしました。
 
 Equifaxは、そのサイバーセキュリティリスクを十分に認識し軽減することに失敗しました。このサイバー攻撃に先立って、同社が認識可能なセキュリティ問題に対処するための措置を講じていれば、情報漏洩は防止された可能性があります。
+
+#登場人物と略語
+- CEO (Chief Executive Officer)
+-- Mark Begor, April 2018 - present
+-- Paulino do Rego Barros Jr., Interim, September 2017 - March 2018
+-- Richard Smith, December 2005 - September 2017
  
 # 主要なイベントのタイムライン
 **2017年3月7日**
