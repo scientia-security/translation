@@ -36,7 +36,7 @@ Equifaxは、情報漏洩について責任を負う役員を数名指名しま�
 
 Equifaxは、そのサイバーセキュリティリスクを十分に認識し軽減することに失敗しました。このサイバー攻撃に先立って、同社が認識可能なセキュリティ問題に対処するための措置を講じていれば、情報漏洩は防止された可能性があります。
 
-#登場人物と略語
+# 登場人物と略語
 本レポートの主要な登場人物は以下の通りです。
 - CEO (Chief Executive Officer)
     - 2018.04 - Present : Mark Begor
@@ -54,7 +54,10 @@ Equifaxは、そのサイバーセキュリティリスクを十分に認識し�
 - その他の上級幹部（Senior Equifax Officials）
     - 2013.01 - Present : John J. Kelley　（CLO - Chief Legal Officer）
     - 2011.03 - 2017.10 : Graeme Payne (SVP & Global Corporate Platforms担当CIO)
- 
+
+（本書で登場する略語については、翻訳から省略）
+
+
 # 主要なイベントのタイムライン
 **2017年3月7日**
 - Apache Strutsプロジェクト管理委員会が、Apache Strutsに影響を与えるCVE-2017-5638の脆弱性を発表し、パッチをリリースします。
