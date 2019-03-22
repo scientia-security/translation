@@ -37,10 +37,23 @@ Equifaxは、情報漏洩について責任を負う役員を数名指名しま�
 Equifaxは、そのサイバーセキュリティリスクを十分に認識し軽減することに失敗しました。このサイバー攻撃に先立って、同社が認識可能なセキュリティ問題に対処するための措置を講じていれば、情報漏洩は防止された可能性があります。
 
 #登場人物と略語
+本レポートの主要な登場人物は以下の通りです。
 - CEO (Chief Executive Officer)
--- Mark Begor, April 2018 - present
--- Paulino do Rego Barros Jr., Interim, September 2017 - March 2018
--- Richard Smith, December 2005 - September 2017
+    - 2018.04 - Present : Mark Begor
+    - 2017.09 - 2018.03 : Paulino do Rego Barros Jr.（暫定CEOとして就任。）
+    - 2005.12 - 2017.09 : Richard Smith
+- CIO (Chief Information Officer - 現在では、CTOとして知られている)
+    - 2018.06 - Present : Bryson Koehler
+    - 2010.01 - 2017.09 : David Webb
+    - 2004.11 - 2009.07 : Robert Webb
+- CSO (Chief Security Officer - 現在では、CISOとして知られている)
+    - 2018.02 - Present : Jamil Farshchi
+    - 2017.09 - 2018.02 : Russ Ayres（暫定CSOとして就任。2018.02から現在は、Deputy CISOに就任）
+    - 2013.08 - 2017.09 : Susan Mauldin
+    - 2005.09 - 2013.03 : Tony Spinelli
+- その他の上級幹部（Senior Equifax Officials）
+    - 2013.01 - Present : John J. Kelley　（CLO - Chief Legal Officer）
+    - 2011.03 - 2017.10 : Graeme Payne (SVP & Global Corporate Platforms担当CIO)
  
 # 主要なイベントのタイムライン
 **2017年3月7日**
