@@ -2,7 +2,7 @@ Equifax Data Breach
 ====
 
 # 注意事項  
-- 本資料は、米国下院監査政府改革委員会が発行した[The Equifax Data Breach Report](https://republicans-oversight.house.gov/wp-content/uploads/2018/12/Equifax-Report.pdf)を翻訳した資料です。
+- 本資料は、米国下院監査政府改革委員会が発行した『[The Equifax Data Breach Report](https://republicans-oversight.house.gov/wp-content/uploads/2018/12/Equifax-Report.pdf)』を翻訳した資料です。
 - 内容については、最大限の努力を持って正確に期していますが、本書の内容に基づく運用結果については責任を負いかねますので、ご了承ください。
 - 他の翻訳は、『[Scientia Securtity on GitHub](https://scientia-security.github.io/)』を参照してください。
 - ブログは『[セキュリティコンサルタントの日誌から](https://www.scientia-security.org/)』を参照してください。。
